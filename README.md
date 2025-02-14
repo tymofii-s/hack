@@ -29,7 +29,7 @@ This is a repository with which you can extract all passwords from locally store
 
 9. Click "Run with PowerShell"
 
-After that the code automatically downloads python and the necessary libraries. No need to install anything extra!
+After that the code automatically downloads python, downloads necessary libraries and run code. No need to install anything extra!
 
 ## Scripts info
 ### Starter
