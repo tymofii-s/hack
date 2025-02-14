@@ -6,11 +6,18 @@ This is a repository with which you can extract all passwords from locally store
 ## Installation
 1. Clone repository
 
+![clone repo](./docs/media/clone.png)
+
+
 2. Go to https://myaccount.google.com/apppasswords
 
 3. Enter your google account password (you must confirm it's you)
 
+![confirm yourself](./docs/media/confirm%20yourself.png)
+
 4. After that, write the name of the program, namely "Python".
+
+![create app password](./docs/media/create%20app%20password.gif)
 
 5. It will generate a unique 16-letter password for you. Copy them to the password.txt file
 
