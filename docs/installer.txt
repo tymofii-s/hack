@@ -1,0 +1,1 @@
+The script installs Python libraries using the built-in subprocess module.

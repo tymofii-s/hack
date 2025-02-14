@@ -1,0 +1,1 @@
+The script takes saved data about the networks the user has connected to and their passwords.

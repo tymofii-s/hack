@@ -1,0 +1,1 @@
+The script takes data from the output.txt file and sends an email from the sender's email address (using their two-factor authentication key) to the recipient's email address.

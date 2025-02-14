@@ -1,0 +1,5 @@
+This script has two ways to get a list of files:
+ - Directly in the code from an array – the scripts variable.
+ - From a text file – in the scripts.txt file, where each line contains the path to the script.
+
+Scripts are run via subprocess.run(), which provides execution with error checking and waiting until the last script completes
