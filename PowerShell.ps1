@@ -1,15 +1,22 @@
-$pythonInstaller = "https://www.python.org/ftp/python/3.12.1/python-3.12.1-amd64.exe"
-$installerPath = "$env:TEMP\python_installer.exe"
-$scriptPath = "C:\Users\Timka\Desktop\progects\hack\start.py"  # Change this path
+$scriptPath = "start.py"  # Зміни цей шлях
 
-# Downloading the installer
-Invoke-WebRequest -Uri $pythonInstaller -OutFile $installerPath
+# Перевірка, чи Python уже встановлений
+if (-not (Get-Command python -ErrorAction SilentlyContinue)) {
+    Write-Host "Python не знайдено, починаємо встановлення..."
+    $pythonInstaller = "https://www.python.org/ftp/python/3.12.1/python-3.12.1-amd64.exe"
+    $installerPath = "$env:TEMP\python_installer.exe"
 
-# Running the installer (silent installation)
-Start-Process -FilePath $installerPath -ArgumentList "/quiet InstallAllUsers=1 PrependPath=1" -Wait
+    # Завантаження інсталятора
+    Invoke-WebRequest -Uri $pythonInstaller -OutFile $installerPath
 
-# Uninstalling the installer
-Remove-Item -Path $installerPath -Force
+    # Запуск інсталятора (тиха установка)
+    Start-Process -FilePath $installerPath -ArgumentList "/quiet InstallAllUsers=1 PrependPath=1" -Wait
 
-# Running a Python script
+    # Видалення інсталятора
+    Remove-Item -Path $installerPath -Force
+
+    Write-Host "Python успішно встановлений."
+}
+
+# Запуск Python-скрипта
 Start-Process -FilePath "python" -ArgumentList "`"$scriptPath`"" -Wait
